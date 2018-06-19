@@ -1,20 +1,216 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+
+<!-- Navbar goes here -->
+
+<!-- Page Layout here -->
+<div class="row">
+
+  <div class="col s12 m4 l3"> <!-- Note that "m4 l3" was added -->
+    <div class="logo">
+      <a href="index.html"> <h1>KinoMino</h1></a>
+    </div><!-- end logo -->
+
+    <div id="menu_icon"></div>
+    <nav class="navMenu">
+      <div id="container">
+
+        <div id="content">
+
+
+          <ul id="sitemap">
+
+            <li><a href="#">Категории</a>
+              <ul>
+                <li><a href="/changeCategory?category=Боевики">Биографии</a></li>
+                <li><a href="#">Боевики</a></li>
+                <li><a href="#">Вестерны</a></li>
+                <li><a href="#">Военные</a></li>
+                <li><a href="#">Детективы</a></li>
+                <li><a href="#">Детские</a></li>
+                <li><a href="#">Документальные</a></li>
+                <li><a href="#">Драмы</a></li>
+                <li><a href="#">Исторические</a></li>
+                <li><a href="#">Комедии</a></li>
+                <li><a href="#">Криминал</a></li>
+                <li><a href="#">Мелодрамы</a></li>
+                <li><a href="#">Мультфильмы</a></li>
+                <li><a href="#">Мюзиклы</a></li>
+                <li><a href="#">Отечественные</a></li>
+                <li><a href="#">Приключения</a></li>
+                <li><a href="#">Семейные</a></li>
+                <li><a href="#">Трагикомедия</a></li>
+                <li><a href="#">Триллеры</a></li>
+                <li><a href="#">Ужасы</a></li>
+                <li><a href="#">Фантастика</a></li>
+                <li><a href="#">Фэнтези</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Дате</a>
+              <ul>
+                <li><a href="#">2018</a></li>
+                <li><a href="#">2017</a></li>
+                <li><a href="#">2016</a></li>
+                <li><a href="#">2015</a></li>
+                <li><a href="#">2014</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Fourth link</a>
+              <ul>
+                <li><a href="#">First link</a></li>
+                <li><a href="#">Second link</a></li>
+                <li><a href="#">Third link</a></li>
+                <li><a href="#">Fourth link</a></li>
+                <li><a href="#">Fifth link</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Second link</a>
+              <ul>
+                <li><a href="#">First link</a>
+                  <ul>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                    <li><a href="#">Fourth link</a></li>
+                    <li><a href="#">Fifth link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Second link</a>
+                  <ul>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                    <li><a href="#">Fourth link</a></li>
+                    <li><a href="#">Fifth link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Third link</a></li>
+                <li><a href="#">Fourth link</a></li>
+                <li><a href="#">Fifth link</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Third link</a>
+              <ul>
+                <li><a href="#">First link</a></li>
+                <li><a href="#">Second link</a></li>
+                <li><a href="#">Third link</a>
+                  <ul>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                    <li><a href="#">Fourth link</a></li>
+                    <li><a href="#">Fifth link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Fourth link</a></li>
+                <li><a href="#">Fifth link</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Fourth link</a>
+              <ul>
+                <li><a href="#">First link</a></li>
+                <li><a href="#">Second link</a></li>
+                <li><a href="#">Third link</a></li>
+                <li><a href="#">Fourth link</a></li>
+                <li><a href="#">Fifth link</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Fifth link</a>
+              <ul>
+                <li><a href="#">First link</a></li>
+                <li><a href="#">Second link</a>
+                  <ul>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                    <li><a href="#">Fourth link</a></li>
+                    <li><a href="#">Fifth link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Third link</a></li>
+                <li><a href="#">Fourth link</a>
+                  <ul>
+                    <li><a href="#">First link</a></li>
+                    <li><a href="#">Second link</a></li>
+                    <li><a href="#">Third link</a></li>
+                    <li><a href="#">Fourth link</a></li>
+                    <li><a href="#">Fifth link</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Fifth link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </nav><!-- end navigation menu -->
+
+    <div class="footer clearfix">
+      <ul class="social clearfix">
+        <li><a href="#" class="fb" data-title="Facebook"></a></li>
+        <li><a href="#" class="google" data-title="Google +"></a></li>
+        <li><a href="#" class="behance" data-title="Behance"></a></li>
+        <!--<li><a href="#" class="twitter" data-title="Twitter"></a></li>
+        <li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+        <li><a href="#" class="rss" data-title="RSS"></a></li>
+      </ul><!-- end social -->
+
+      <div class="rights">
+        <p>Copyright © 2014 magnetic.</p>
+        <p>Template by <a href="">Pixelhint.com</a></p>
+      </div><!-- end rights -->
+    </div>
+    <!-- end footer -->
+
+  </div>
+
+  <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+    <app-moves
+      *ngFor="let moves of films"
+      [films] = 'moves'
+    ></app-moves>
+ <!-- Note that "m8 l9" was added -->
+    <app-serials
+      *ngFor="let ser of serial"
+      [serial] = 'ser'
+    >
+
+    </app-serials>
+  </div>
+
+</div>
+<script>
+
+  this.sitemapstyler = function () {
+    var sitemap = document.getElementById("sitemap")
+    if (sitemap) {
+
+      this.listItem = function (li) {
+        if (li.getElementsByTagName("ul").length > 0) {
+          var ul = li.getElementsByTagName("ul")[0];
+          ul.style.display = "none";
+          var span = document.createElement("span");
+          span.className = "collapsed";
+          span.onclick = function () {
+            ul.style.display = (ul.style.display == "none") ? "block" : "none";
+            this.className = (ul.style.display == "none") ? "collapsed" : "expanded";
+          };
+          li.appendChild(span);
+        }
+        ;
+      };
+
+      var items = sitemap.getElementsByTagName("li");
+      for (var i = 0; i < items.length; i++) {
+        listItem(items[i]);
+      }
+      ;
+
+    }
+    ;
+  };
+
+  window.onload = sitemapstyler;
+</script>
