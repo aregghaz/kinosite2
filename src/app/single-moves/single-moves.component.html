@@ -1,0 +1,29 @@
+<div class="col s12 m8 l9">
+
+  <section class="top">
+    <div class="wrapper content_header clearfix">
+      <div class="work_nav">
+
+
+
+      </div><!-- end work_nav -->
+      <h1 class="title">{{ film.name }}</h1>
+    </div>
+  </section><!-- end top -->
+
+  <section class="wrapper">
+    <div class="content">
+      <img src="http:{{ film.img_link }}" width="300" height="500" style="float: left" alt="">
+  <div class="description_film">
+    <p>Жанр: {{ film.genre }}</p>
+    <p>Год выпуска: {{ film.year }}</p>
+    <p>Длительность: {{ film.duration }}</p>
+  </div>
+
+      {{ film.iframe_url }}
+    </div><!-- end content -->
+    <div class="content">
+      <iframe [src]="jan()" frameborder="0"></iframe>
+    </div>
+  </section>
+</div><!-- end main -->

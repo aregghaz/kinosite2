@@ -8,23 +8,40 @@ import { SerialsComponent } from './serials/serials.component';
 import {MovesService} from './service/moves.service';
 import {SerialsService} from './service/serials.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HomePageComponent } from './home-page/home-page.component';
+import { RouterModule} from '@angular/router';
+import { SingleSerialComponent } from './single-serial/single-serial.component';
+import { SingleMovesComponent } from './single-moves/single-moves.component';
+import {SingleSerialsService} from './service/singleSerial.service';
+import {SingleMoveService} from './service/singleMove.service';
 
+const routes = [
+  {path: '', pathMatch: 'full', component: HomePageComponent},
+  {path: 'serial/:',  component: SingleSerialComponent},
+  {path: 'film/:',  component: SingleMovesComponent},
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     MovesComponent,
-    SerialsComponent
+    SerialsComponent,
+    HomePageComponent,
+    SingleSerialComponent,
+    SingleMovesComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [
     MovesService,
-    SerialsService
+    SerialsService,
+    SingleSerialsService,
+    SingleMoveService
   ],
   bootstrap: [
     AppComponent

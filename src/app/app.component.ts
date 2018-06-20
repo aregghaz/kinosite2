@@ -8,18 +8,6 @@ import {SerialsService} from './service/serials.service';
   styleUrls: ['./app.component.scss'],
 
 })
-export class AppComponent implements OnInit  {
-  films = [];
-  serial ;
+export class AppComponent  {
 
-  constructor(private  movesService: MovesService, private serialsService: SerialsService) {}
-
-  ngOnInit() {
-    this.movesService.getMoves().subscribe(moves => {
-      this.films = moves;
-    });
-    this.serialsService.getSerials().subscribe(serials => {
-      this.serial = serials;
-    });
-  }
 }
