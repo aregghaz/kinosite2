@@ -766,3 +766,16 @@ h5, h6          { font-weight: bolder }
 .navMenu{
   height: 100%;
 }
+
+input[type=text]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #039be5;
+}
+input[type=text]:not(.browser-default).validate+label,.input-field>label,.materialize-textarea:focus:not([readonly])+label {
+  color: #039be5;
+}
+input[type=text]:not(.browser-default),textarea.materialize-textarea {
+  border-bottom: 1px solid #039be5;
+}
+.search_input {
+  margin-top: 35px;
+}
