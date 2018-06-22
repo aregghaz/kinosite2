@@ -1,0 +1,36 @@
+.copyright_body {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.copyright_div {
+
+  border: 1px solid #039be5;
+  padding: 15px;
+}
+
+.title {
+  color: #039be5;
+}
+
+.selected_text {
+  color: #039be5;
+}
+
+.copyright_div {
+  ul {
+    list-style-type: none;
+    li {
+      list-style-type: none;
+      ul {
+        li {
+          list-style-type: disc;
+          margin-left: 35px;
+        }
+      }
+
+    }
+  }
+
+}
+

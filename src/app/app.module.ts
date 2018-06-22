@@ -14,11 +14,18 @@ import { SingleSerialComponent } from './single-serial/single-serial.component';
 import { SingleMovesComponent } from './single-moves/single-moves.component';
 import {SingleSerialsService} from './service/singleSerial.service';
 import {SingleMoveService} from './service/singleMove.service';
+import { MessageComponent } from './message/message.component';
+import { CopyrightComponent } from './copyright/copyright.component';
+import { AdvertisementComponent } from './advertisement/advertisement.component';
+import {SearchPipe} from './search.pipe';
 
 const routes = [
   {path: '', pathMatch: 'full', component: HomePageComponent},
   {path: 'serial/:',  component: SingleSerialComponent},
   {path: 'film/:',  component: SingleMovesComponent},
+  {path: 'message',  component: MessageComponent},
+  {path: 'copyright',  component: CopyrightComponent},
+  {path: 'advertisement',  component: AdvertisementComponent},
 ];
 
 @NgModule({
@@ -28,7 +35,11 @@ const routes = [
     SerialsComponent,
     HomePageComponent,
     SingleSerialComponent,
-    SingleMovesComponent
+    SingleMovesComponent,
+    MessageComponent,
+    CopyrightComponent,
+    AdvertisementComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

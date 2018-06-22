@@ -11,7 +11,7 @@ export class HomePageComponent implements OnInit {
 
   films = [];
   serial ;
-
+  searhStr ='';
   constructor(private  movesService: MovesService, private serialsService: SerialsService) {}
 
   ngOnInit() {

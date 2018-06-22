@@ -1,16 +1,16 @@
 import { Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SingleSerialsService} from '../service/singleSerial.service';
-
+import { DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-single-serial',
   templateUrl: './single-serial.component.html',
   styleUrls: ['./single-serial.component.css']
 })
 export class SingleSerialComponent implements OnInit {
-  serial = {};
+  serial: any = {};
   id;
-  constructor( private activeRoute: ActivatedRoute , private moves: SingleSerialsService) { }
+  constructor( private activeRoute: ActivatedRoute , private moves: SingleSerialsService,private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params => {
@@ -19,7 +19,10 @@ export class SingleSerialComponent implements OnInit {
     });
     this.moves.getSingleSerials().subscribe(serials => {
        this.serial = serials;
-       console.log(this.serial);
+
     });
+  }
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

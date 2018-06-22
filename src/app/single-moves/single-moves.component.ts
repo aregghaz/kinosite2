@@ -1,17 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SingleMoveService} from '../service/singleMove.service';
-
+import { DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-single-moves',
   templateUrl: './single-moves.component.html',
-  styleUrls: ['./single-moves.component.scss']
+  styleUrls: ['./single-moves.component.scss'],
+
 })
+
 export class SingleMovesComponent implements OnInit {
   film: any = {};
   id;
-  constructor( private activeRoute: ActivatedRoute , private singl: SingleMoveService) { }
+
+
+  constructor( private activeRoute: ActivatedRoute , private singl: SingleMoveService,private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params => {
@@ -22,8 +26,7 @@ export class SingleMovesComponent implements OnInit {
       this.film = films;
     });
   }
-
-  jan() {
-    return this.film.iframe_url;
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

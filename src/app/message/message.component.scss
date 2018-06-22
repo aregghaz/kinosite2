@@ -1,0 +1,21 @@
+.contact_us {
+  margin-top: 50px;
+  border: 1px solid  #039be5;
+  padding: 15px;
+}
+.waves-light {
+  background-color: #039be5;
+}
+.title {
+  color: #039be5;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #039be5;
+}
+input[type=text]:not(.browser-default).validate+label,.input-field>label,.materialize-textarea:focus:not([readonly])+label {
+  color: #039be5;
+}
+input[type=text]:not(.browser-default),textarea.materialize-textarea {
+  border-bottom: 1px solid #039be5;
+}
