@@ -1,15 +1,22 @@
-<div class="col s12 m8 l9">
-  <div class="wrapper content_header clearfix">
 
-    <h1 class="title">{{ serial.name }}</h1>
+<nav class="col s12 m8 l9">
+  <div class="nav-wrapper">
+    <div class="col s12">
+      <a routerLink="/" class="breadcrumb">Главная</a>
+      <a href="#!" class="breadcrumb">Сериалы</a>
+      <a href="#!" class="breadcrumb">{{ serial.name }}</a>
+    </div>
   </div>
+</nav>
+<div class="col s12 m8 l9">
+
   <section class="col s12 m12 l12">
 
     <div class="content ">
       <div class="col s12 m12 l12 desc_body">
         <img src="http:{{ serial.img_link }}" width="250" height="400" style="float: left" alt="">
         <div class="description_film">
-          <h3 class="title">{{ serial.name }}</h3>
+          <h1 class="title">{{ serial.name }}</h1>
           <p>Жанр: {{ serial.genre }}</p>
           <p>Год выпуска: {{ serial.year }}</p>
           <p>Длительность: {{ serial.duration }}</p>

@@ -5,7 +5,7 @@ import { DomSanitizer} from '@angular/platform-browser';
 @Component({
   selector: 'app-single-serial',
   templateUrl: './single-serial.component.html',
-  styleUrls: ['./single-serial.component.css']
+  styleUrls: ['./single-serial.component.scss']
 })
 export class SingleSerialComponent implements OnInit {
   serial: any = {};
