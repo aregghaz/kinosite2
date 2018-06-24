@@ -13,11 +13,13 @@
     ></app-moves>
     <!-- Note that "m8 l9" was added -->
     <app-serials
-      *ngFor="let ser of serial | search :searhStr"
+      *ngFor="let ser of returnedArray | search :searhStr"
       [serial] = 'ser'
     >
 
     </app-serials>
+    <pagination [totalItems]="serial.length" (pageChanged)="pageChanged($event)"></pagination>
   </div>
+
 
 

@@ -9,4 +9,5 @@ import {Component, Injectable, Input} from '@angular/core';
 export class SerialsComponent  {
 
   @Input() serial;
+
 }

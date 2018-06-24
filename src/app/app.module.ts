@@ -18,7 +18,7 @@ import { MessageComponent } from './message/message.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
 import {SearchPipe} from './search.pipe';
-
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 const routes = [
   {path: '', pathMatch: 'full', component: HomePageComponent},
   {path: 'serial/:',  component: SingleSerialComponent},
@@ -46,7 +46,8 @@ const routes = [
     HttpModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    PaginationModule.forRoot()
   ],
   providers: [
     MovesService,
