@@ -7,17 +7,18 @@ import { FormsModule } from '@angular/forms';
 import { SerialsComponent } from './serials/serials.component';
 import {MovesService} from './service/moves.service';
 import {SerialsService} from './service/serials.service';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule} from '@angular/router';
 import { SingleSerialComponent } from './single-serial/single-serial.component';
 import { SingleMovesComponent } from './single-moves/single-moves.component';
-import {SingleSerialsService} from './service/singleSerial.service';
-import {SingleMoveService} from './service/singleMove.service';
+import { SingleSerialsService } from './service/singleSerial.service';
+import { SingleMoveService } from './service/singleMove.service';
 import { MessageComponent } from './message/message.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
-import {SearchPipe} from './search.pipe';
+import { FilmsPipe } from './pipe/films.pipe';
+import {SerialsPipe} from './pipe/serials.pipe';
 
 const routes = [
   {path: '', pathMatch: 'full', component: HomePageComponent},
@@ -39,7 +40,8 @@ const routes = [
     MessageComponent,
     CopyrightComponent,
     AdvertisementComponent,
-    SearchPipe
+    FilmsPipe,
+    SerialsPipe
   ],
   imports: [
     BrowserModule,

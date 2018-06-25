@@ -10,7 +10,7 @@ import {MovesService} from '../service/moves.service';
 export class HomePageComponent implements OnInit {
 
   films = [];
-  serial ;
+  serial:any = [];
   searhStr ='';
   constructor(private  movesService: MovesService, private serialsService: SerialsService) {}
 

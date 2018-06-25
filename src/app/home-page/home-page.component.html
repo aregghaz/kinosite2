@@ -8,12 +8,12 @@
 
   <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
     <app-moves
-      *ngFor="let moves of films | search :searhStr"
+      *ngFor="let moves of films | searchFilms :searhStr"
       [films] = 'moves'
     ></app-moves>
     <!-- Note that "m8 l9" was added -->
     <app-serials
-      *ngFor="let ser of serial | search :searhStr"
+      *ngFor="let ser of serial | searchSerial :searhStr"
       [serial] = 'ser'
     >
 
