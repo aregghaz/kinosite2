@@ -12,6 +12,7 @@ import { DomSanitizer} from '@angular/platform-browser';
 
 export class SingleMovesComponent implements OnInit {
   film: any = {};
+  url;
   id;
 
 
@@ -25,6 +26,8 @@ export class SingleMovesComponent implements OnInit {
     this.singl.getSingleMoves().subscribe(films => {
       this.film = films;
     });
+
+
   }
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);

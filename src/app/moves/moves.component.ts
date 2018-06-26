@@ -9,5 +9,6 @@ import {Component, Injectable, Input} from '@angular/core';
 export class MovesComponent {
 
   @Input() films;
+
 }
 

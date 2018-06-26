@@ -1,14 +1,13 @@
-
-<nav class="col s12 m8 l9">
-  <div class="nav-wrapper">
-    <div class="col s12">
-      <a routerLink="/" class="breadcrumb">Главная</a>
-      <a href="#!" class="breadcrumb">Сериалы</a>
-      <a href="#!" class="breadcrumb">{{ serial.name }}</a>
-    </div>
-  </div>
-</nav>
 <div class="col s12 m8 l9">
+  <nav class="nav_brodcast">
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <a [routerLink] = "['/' ]" class="breadcrumb">Главная</a>
+        <a [routerLink] = "['/allSerials']" class="breadcrumb">Сериалы</a>
+        <a href="#!" class="breadcrumb">{{ serial.name }}</a>
+      </div>
+    </div>
+  </nav>
 
   <section class="col s12 m12 l12">
 

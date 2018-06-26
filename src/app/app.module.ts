@@ -7,18 +7,23 @@ import { FormsModule } from '@angular/forms';
 import { SerialsComponent } from './serials/serials.component';
 import {MovesService} from './service/moves.service';
 import {SerialsService} from './service/serials.service';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule} from '@angular/router';
 import { SingleSerialComponent } from './single-serial/single-serial.component';
 import { SingleMovesComponent } from './single-moves/single-moves.component';
-import {SingleSerialsService} from './service/singleSerial.service';
-import {SingleMoveService} from './service/singleMove.service';
+import { SingleSerialsService } from './service/singleSerial.service';
+import { SingleMoveService } from './service/singleMove.service';
 import { MessageComponent } from './message/message.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { AdvertisementComponent } from './advertisement/advertisement.component';
-import {SearchPipe} from './search.pipe';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { FilmsPipe } from './pipe/films.pipe';
+import {SerialsPipe} from './pipe/serials.pipe';
+import { AllFilmsComponent } from './all-films/all-films.component';
+import {AllFilmsService} from './service/allFilms.service';
+import { AllSerialsComponent } from './all-serials/all-serials.component';
+import {AllSerialsService} from './service/allSerials.service';
+
 const routes = [
   {path: '', pathMatch: 'full', component: HomePageComponent},
   {path: 'serial/:',  component: SingleSerialComponent},
@@ -26,6 +31,8 @@ const routes = [
   {path: 'message',  component: MessageComponent},
   {path: 'copyright',  component: CopyrightComponent},
   {path: 'advertisement',  component: AdvertisementComponent},
+  {path: 'allFilms',  component: AllFilmsComponent},
+  {path: 'allSerials',  component: AllSerialsComponent},
 ];
 
 @NgModule({
@@ -39,21 +46,25 @@ const routes = [
     MessageComponent,
     CopyrightComponent,
     AdvertisementComponent,
-    SearchPipe
+    FilmsPipe,
+    SerialsPipe,
+    AllFilmsComponent,
+    AllSerialsComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes),
-    PaginationModule.forRoot()
+    RouterModule.forRoot(routes)
   ],
   providers: [
     MovesService,
     SerialsService,
     SingleSerialsService,
-    SingleMoveService
+    SingleMoveService,
+    AllFilmsService,
+    AllSerialsService
   ],
   bootstrap: [
     AppComponent

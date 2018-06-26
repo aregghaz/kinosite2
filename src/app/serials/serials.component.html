@@ -4,17 +4,11 @@
     <img class="activator" src="http:{{ serial.img_link }}">
   </div>
   <div class="card-content">
-    <span class=" activator grey-text text-darken-4">
-    <i class="material-icons right">more_vert</i>
-      {{ serial.name }}
-    </span>
+    <span class="card-title activator grey-text text-darken-4">{{ serial.name }}<i class="material-icons right">more_vert</i></span>
     <p><a [routerLink]="['/serial', serial.id ]">Смотреть фильм</a></p>
   </div>
   <div class="card-reveal">
-    <span class="card-title grey-text text-darken-4">
-      <i class="material-icons right">close</i>
-      {{ serial.name }}
-    </span>
+    <span class="card-title grey-text text-darken-4">{{ serial.name }}<i class="material-icons right">close</i></span>
     <p>Жанр: {{ serial.genre }}</p>
     <p>Год выпуска: {{ serial.year }}</p>
 

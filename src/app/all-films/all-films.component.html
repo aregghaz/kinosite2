@@ -1,0 +1,16 @@
+
+<div  class="search_input">
+  <div class="input-field col s8">
+    <input  id="search" type="text" class="validate" [(ngModel)]="searhStr">
+    <label class="active" for="search">Поиск по имени</label>
+  </div>
+</div>
+
+<div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+  <app-moves
+    *ngFor="let moves of films | searchFilms :searhStr"
+    [films] = 'moves'
+  ></app-moves>
+
+
+</div>

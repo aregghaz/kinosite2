@@ -1,17 +1,17 @@
 import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class MovesService {
-  constructor(private http: Http) {
+  constructor(private  client: HttpClient) {
   }
 
   getMoves() {
-    return this.http.get('http://127.0.0.1:8000/newFilm')
+    return this.client.get('http://127.0.0.1:8000/newFilm')
       .map(function (response) {
-        return response.json();
+        return response;
       })
-      .map(response => response.data);
+
   }
 }
