@@ -1,5 +1,6 @@
 import {Component, Injectable, Input, OnInit} from '@angular/core';
 import {AllFilmsService} from '../service/allFilms.service';
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 
 
 @Injectable()
@@ -11,15 +12,26 @@ import {AllFilmsService} from '../service/allFilms.service';
 export class AllFilmsComponent implements OnInit {
 
  films:any =[];
+ films2:any =[];
   searhStr ='';
 
+  maxSize = 5;
+  returnedArray;
   constructor(private  allFilms: AllFilmsService ) { }
 
   ngOnInit() {
     this.allFilms.getAllMoves().subscribe(moves => {
       this.films = moves;
-      console.log(this.films)
+
+      this.returnedArray = this.films.slice(0, 10);
     });
   }
 
+
+
+  pageChanged(event: PageChangedEvent): void {
+    const startItem = (event.page - 1) * event.itemsPerPage;
+    const endItem = event.page * event.itemsPerPage;
+    this.returnedArray = this.films.slice(startItem, endItem);
+  }
 }

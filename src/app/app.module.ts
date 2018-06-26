@@ -23,7 +23,7 @@ import { AllFilmsComponent } from './all-films/all-films.component';
 import {AllFilmsService} from './service/allFilms.service';
 import { AllSerialsComponent } from './all-serials/all-serials.component';
 import {AllSerialsService} from './service/allSerials.service';
-
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 const routes = [
   {path: '', pathMatch: 'full', component: HomePageComponent},
   {path: 'serial/:',  component: SingleSerialComponent},
@@ -56,7 +56,8 @@ const routes = [
     HttpModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    PaginationModule.forRoot()
   ],
   providers: [
     MovesService,
