@@ -8,7 +8,7 @@ export class MovesService {
   }
 
   getMoves() {
-    return this.http.get('http://127.0.0.1:8000/newFilm')
+    return this.http.get('http://18.191.185.107/newFilm')
       .map(function (response) {
         return response.json();
       })

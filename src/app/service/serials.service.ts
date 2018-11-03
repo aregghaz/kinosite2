@@ -18,7 +18,7 @@ export class SerialsService {
   // }
 
   getSerials() {
-   return this.client.get('http://127.0.0.1:8000/newSerials')
+   return this.client.get('http://18.191.185.107/newSerials')
       .map(function (response) {
         return response;
       })
