@@ -8,7 +8,7 @@ export class CategoryFilmsService {
   }
 
   getAllSerilas() {
-    return this.client.get('http://127.0.0.1:8000/serials')
+    return this.client.get('http://18.191.185.107/serials')
       .map(function (response) {
         return response;
       })

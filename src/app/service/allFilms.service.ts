@@ -8,7 +8,7 @@ export class AllFilmsService {
   }
 
   getAllMoves() {
-    return this.client.get('http://127.0.0.1:8000/allFilm')
+    return this.client.get('http://18.191.185.107/allFilm')
       .map(function (response) {
         return response;
       })

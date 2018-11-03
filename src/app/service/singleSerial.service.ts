@@ -10,7 +10,7 @@ export class SingleSerialsService  {
 
   id;
   getSingleSerials() {
-    return this.client.get('http://127.0.0.1:8000/viewSerials?id=' + this.id)
+    return this.client.get('http://18.191.185.107/viewSerials?id=' + this.id)
       .map(function (response) {
         return response;
       })

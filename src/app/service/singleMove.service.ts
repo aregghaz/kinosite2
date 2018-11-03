@@ -10,7 +10,7 @@ export class SingleMoveService  {
   }
   id;
   getSingleMoves() {
-    return this.client.get('http://127.0.0.1:8000/view?id=' + this.id)
+    return this.client.get('http://18.191.185.107/view?id=' + this.id)
       .map(function (response) {
         return response;
       })
