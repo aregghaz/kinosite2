@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class SingleMoveService  {
-  constructor(private http: Http, private  client: HttpClient) {
+  constructor( private  client: HttpClient) {
   }
   id;
   getSingleMoves() {

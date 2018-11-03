@@ -2,9 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SingleSerialsService} from '../service/singleSerial.service';
 import { DomSanitizer} from '@angular/platform-browser';
-import {HttpClient} from '@angular/common/http';
 import 'rxjs/add/operator/map';
-
 
 
 @Component({
@@ -17,9 +15,7 @@ import 'rxjs/add/operator/map';
 export class SingleSerialComponent implements OnInit {
   serial: any = {};
   id;
-  constructor( private  client: HttpClient, private activeRoute: ActivatedRoute , private serials: SingleSerialsService, private sanitizer: DomSanitizer) {
-
-  }
+  constructor(private activeRoute: ActivatedRoute, private serials: SingleSerialsService, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params => {

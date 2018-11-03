@@ -11,9 +11,9 @@ import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 })
 export class AllFilmsComponent implements OnInit {
 
- films:any =[];
- films2:any =[];
-  searhStr ='';
+ films:any = [];
+ films2: any = [];
+  searhStr = '';
 
   maxSize = 5;
   returnedArray;

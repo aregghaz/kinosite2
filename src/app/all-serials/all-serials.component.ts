@@ -8,8 +8,8 @@ import {AllSerialsService} from '../service/allSerials.service';
 })
 export class AllSerialsComponent implements OnInit {
 
-  serial:any =[];
-  searhStr ='';
+  serial: any = [];
+  searhStr = '';
 
   constructor(private  allSerials: AllSerialsService ) { }
 

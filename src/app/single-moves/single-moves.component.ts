@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {SingleMoveService} from '../service/singleMove.service';
 import { DomSanitizer} from '@angular/platform-browser';
+import 'rxjs/add/operator/map';
+
+
 
 @Component({
   selector: 'app-single-moves',
@@ -12,11 +15,10 @@ import { DomSanitizer} from '@angular/platform-browser';
 
 export class SingleMovesComponent implements OnInit {
   film: any = {};
-  url;
   id;
 
 
-  constructor( private activeRoute: ActivatedRoute , private singl: SingleMoveService,private sanitizer: DomSanitizer) {}
+  constructor(private activeRoute: ActivatedRoute , private singl: SingleMoveService, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.activeRoute.params.subscribe(params => {

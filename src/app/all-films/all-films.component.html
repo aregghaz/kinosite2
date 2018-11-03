@@ -8,15 +8,10 @@
 
 <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
   <app-moves
-    *ngFor="let moves of returnedArray | searchFilms :searhStr"
-    [films] = 'moves'
+          *ngFor="let moves of films | searchFilms :searhStr"
+          [films] = 'moves'
   ></app-moves>
-  <app-all-films
-    *ngFor="let moves of films | searchFilms :searhStr"
-    
-  >
 
-  </app-all-films>
   <pagination [totalItems]="films.length" (pageChanged)="pageChanged($event)" [maxSize]="maxSize"></pagination>
 
 </div>
