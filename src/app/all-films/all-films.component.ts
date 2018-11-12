@@ -24,7 +24,7 @@ export class AllFilmsComponent implements OnInit {
     ngOnInit() {
         this.allFilms.getAllMoves().subscribe(moves => {
             this.films = moves;
-            this.returnedArray = this.films.slice(0, 10);
+            this.returnedArray = this.films.slice(0, 8);
         });
     }
 
@@ -35,11 +35,5 @@ export class AllFilmsComponent implements OnInit {
         this.returnedArray = this.films.slice(startItem, endItem);
     }
 
-    // ngAfterViewInit() {
-    //     this.allFilms.getAllMoves().subscribe(moves => {
-    //         this.films = moves;
-    //         console.log(this.films);
-    //         this.returnedArray = this.films.slice(0, 10);
-    //     });
-    // }
+
 }

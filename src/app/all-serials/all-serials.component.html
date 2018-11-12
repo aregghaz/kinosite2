@@ -4,17 +4,40 @@
     <input  id="search" type="text" class="validate" [(ngModel)]="searhStr">
     <label class="active" for="search">Поиск по имени</label>
   </div>
+  <div class="col s12 m8 l9" style="text-align: center" *ngIf="searhStr.length == 0">
+    <pagination [totalItems]="serial.length" (pageChanged)="pageChanged($event)" [maxSize]="maxSize"></pagination>
+  </div>
+
+  <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
+
+    <!-- Note that "m8 l9" was added -->
+
+
+    <div class="row" *ngIf="searhStr.length == 0">
+      <app-serials
+              *ngFor="let ser of returnedArray"
+              [serial] = 'ser'
+      >
+      </app-serials>
+    </div>
+    <div class="row" *ngIf="searhStr.length > 0">
+      <app-serials
+              *ngFor="let ser of serial | searchFilms :searhStr "
+              [serial] = 'ser'
+      >
+      </app-serials>
+    </div>
+    <!--<div *ngFor="let film of films | searchFilms :searhStr" style="display: none">-->
+
+    <!--</div>-->
+
+    <div class="row" style="text-align: center" *ngIf="searhStr.length == 0">
+      <pagination [totalItems]="serial.length" (pageChanged)="pageChanged($event)" [maxSize]="maxSize"></pagination>
+    </div>
+
+
+  </div>
 </div>
 
-<div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-
-  <!-- Note that "m8 l9" was added -->
-  <app-serials
-    *ngFor="let ser of serial | searchSerial :searhStr"
-    [serial] = 'ser'
-  >
-
-  </app-serials>
-</div>
 
 
