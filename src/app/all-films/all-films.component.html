@@ -8,20 +8,40 @@
     </div>
 
     <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
-        <div class="row" *ngIf="searhStr.length == 0">
-            <app-moves
-                    *ngFor="let moves of returnedArray"
-                    [films]='moves'
-            >
-            </app-moves>
+        <div *ngIf="!categories">
+            <div class="row" *ngIf="searhStr.length == 0">
+                <app-moves
+                        *ngFor="let moves of returnedArray"
+                        [films]='moves'
+                >
+                </app-moves>
+            </div>
+            <div class="row" *ngIf="searhStr.length > 0">
+                <app-moves
+                        *ngFor="let moves of films | searchFilms :searhStr "
+                        [films]='moves'
+                >
+                </app-moves>
+            </div>
         </div>
-        <div class="row" *ngIf="searhStr.length > 0">
-            <app-moves
-                    *ngFor="let moves of films | searchFilms :searhStr "
-                    [films]='moves'
-            >
-            </app-moves>
+        <div *ngIf="categories">
+            <div class="row" *ngIf="searhStr.length == 0">
+                <app-moves
+                        *ngFor="let moves of results"
+                        [films]='moves'
+                >
+                </app-moves>
+            </div>
+            <div class="row" *ngIf="searhStr.length > 0">
+                <app-moves
+                        *ngFor="let moves of films2 | searchFilms :searhStr "
+                        [films]='moves'
+                >
+                </app-moves>
+            </div>
+
         </div>
+
         <!--<div *ngFor="let film of films | searchFilms :searhStr" style="display: none">-->
 
         <!--</div>-->
