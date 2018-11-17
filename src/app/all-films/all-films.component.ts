@@ -40,13 +40,17 @@ export class AllFilmsComponent implements OnInit {
     pageChanged(event: PageChangedEvent): void {
         const startItem = (event.page - 1) * event.itemsPerPage;
         const endItem = event.page * event.itemsPerPage;
-        this.returnedArray = this.films.slice(startItem, endItem);
+        if (this.categories) {
+            this.results = this.films2.slice(startItem, endItem);
+        } else {
+            this.returnedArray = this.films.slice(startItem, endItem);
+        }
     }
 
     changeCategory() {
         this.route.params.subscribe(params => {
             if (Object.keys(params).length > 0) {
-                 this.categories = true;
+                this.categories = true;
                 this.category.getCategoryMoves(params.category).subscribe(data => {
                     this.films2 = data;
                     this.results = this.films2.slice(0, 8);

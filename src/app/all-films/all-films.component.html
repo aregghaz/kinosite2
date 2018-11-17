@@ -3,12 +3,11 @@
         <input id="search" type="text" class="validate" [(ngModel)]="searhStr">
         <label class="active" for="search">Поиск по имени</label>
     </div>
-    <div class="col s12 m8 l9" style="text-align: center" *ngIf="searhStr.length == 0">
-        <pagination [totalItems]="films.length" (pageChanged)="pageChanged($event)" [maxSize]="maxSize"></pagination>
-    </div>
-
     <div class="col s12 m8 l9"> <!-- Note that "m8 l9" was added -->
         <div *ngIf="!categories">
+            <pagination [totalItems]="films.length" style="text-align: center" *ngIf="searhStr.length == 0"
+                        (pageChanged)="pageChanged($event)"
+                        [maxSize]="maxSize"></pagination>
             <div class="row" *ngIf="searhStr.length == 0">
                 <app-moves
                         *ngFor="let moves of returnedArray"
@@ -23,8 +22,15 @@
                 >
                 </app-moves>
             </div>
+            <pagination [totalItems]="films.length" style="text-align: center" *ngIf="searhStr.length == 0"
+                        (pageChanged)="pageChanged($event)"
+                        [maxSize]="maxSize"></pagination>
         </div>
         <div *ngIf="categories">
+            <pagination [totalItems]="films2.length" style="text-align: center" *ngIf="searhStr.length == 0"
+                        (pageChanged)="pageChanged($event)"
+                        [maxSize]="maxSize"></pagination>
+
             <div class="row" *ngIf="searhStr.length == 0">
                 <app-moves
                         *ngFor="let moves of results"
@@ -39,17 +45,9 @@
                 >
                 </app-moves>
             </div>
-
+            <pagination [totalItems]="films2.length" style="text-align: center" *ngIf="searhStr.length == 0"
+                        (pageChanged)="pageChanged($event)"
+                        [maxSize]="maxSize"></pagination>
         </div>
-
-        <!--<div *ngFor="let film of films | searchFilms :searhStr" style="display: none">-->
-
-        <!--</div>-->
-
-        <div class="row" style="text-align: center" *ngIf="searhStr.length == 0">
-            <pagination [totalItems]="films.length" (pageChanged)="pageChanged($event)" [maxSize]="maxSize"></pagination>
-        </div>
-
-
     </div>
 </div>
