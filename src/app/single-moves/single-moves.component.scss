@@ -30,3 +30,8 @@
 .viboom-overroll {
   height: 750px;
 }
+.video-container iframe, .video-container object, .video-container embed {
+  position: static;
+  height: 500px;
+  width: 100%;
+}

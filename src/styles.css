@@ -1,5 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
-@media only screen and (max-width: 600px) {
+#liveInternet {
+    display: none;
+}
+#vk_groups {
+    display: inline-block;position: absolute;
+    top: 100%;
+    left: 30px;
+}
+
+@media only screen and (max-width: 750px) {
+    #vk_groups {
+        display: inline-block;
+        position: absolute;
+        top: 60%;
+        left: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    #vk_groups {
+        left: 10px;
+    }
+   #liveInternet {
+        display: none;
+    }
+}
+@media only screen and (max-width: 649px) {
     #vk_groups,#liveInternet {
         display: none;
     }

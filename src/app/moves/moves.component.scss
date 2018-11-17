@@ -15,3 +15,262 @@
 .card {
   padding-top: 5px;
 }
+.filmName {
+  width: 80%;
+  float: left;
+}
+@media only screen and (max-width: 2560px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 600px;
+    min-height: 500px;
+  }
+  .watchOnline {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 2400px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 570px;
+    min-height: 500px;
+  }
+
+}
+@media only screen and (max-width: 2291px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 550px;
+    min-height: 500px;
+  }
+
+}
+@media only screen and (max-width: 2220px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 530px;
+    min-height: 500px;
+  }
+
+}
+@media only screen and (max-width: 2143px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 500px;
+  }
+
+}
+@media only screen and (max-width: 1626px) {
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 480px;
+    min-height: 450px;
+  }
+  .card .card-content .card-title {
+    display: block;
+    line-height: 27px;
+    margin-bottom: 8px;
+  }
+  .card .card-title {
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 1520px) {
+  .card .card-title {
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+@media only screen and (max-width: 1450px) {
+  .card .card-content {
+    padding: 10px 0;
+    border-radius: 0 0 2px 2px;
+  }
+  .card .card-title {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  i.right {
+    float: right;
+    margin-left: 0px;
+  }
+  .filmName {
+    width: 80%;
+    float: left;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 380px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 350px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .card .card-content .card-title {
+    display: block;
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 300px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .card .card-title {
+    font-size: 15px;
+    font-weight: 300;
+  }
+  .card .card-content .card-title {
+    display: block;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 250px;
+  }
+  .watchOnline {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .collapsible-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 0.5rem;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 200px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .card .card-title {
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .watchOnline {
+    font-size: 10px;
+  }
+  .filmName {
+    width: 70%;
+    float: left;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 181px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .card-content {
+    max-height: 100px;
+    min-height: 100px;
+    width: 100%;
+  }
+  .card .card-content .card-title {
+    display: block;
+    line-height: 15px;
+    margin-bottom: 8px;
+  }
+  .card-image img{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 500px;
+    min-height: 150px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .card .card-content .card-title {
+    display: block;
+    line-height: 11px;
+    margin-bottom: 8px;
+  }
+  .card-image img{
+
+    min-height: 125px;
+  }
+  .card .card-reveal {
+    padding: 5px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+    font-size: 9px;
+  }
+  .card .card-title {
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .watchOnline {
+    font-size: 6px;
+  }
+  .filmName {
+    width: 67%;
+    float: left;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  .filmName{
+    line-height: 1;
+    font-size: 36px;
+  }
+  .filmName {
+    width: 95%;
+    float: left;
+  }
+  .watchOnline{
+    font-size: 20px;
+  }
+  .card-reveal p {
+
+    overflow-y: auto;
+    left: 10px;
+    font-size: 30px;
+  }
+  .card-content {
+    max-height: 100px;
+    min-height: 130px;
+    width: 100%;
+  }
+  .card .card-title{
+    font-size: 30px;
+    font-weight: 400;
+  }
+}
