@@ -9,16 +9,16 @@
     </div>
   </nav>
 
-  <section class="col s12 m12 l12">
+  <section class="col s12 m12 l12 film-description">
 
     <div class="content ">
       <div class="col s12 m12 l12 desc_body">
         <img src="http:{{ film.img_link }}" width="250" height="400" style="float: left" alt="">
         <div class="description_film">
           <h1 class="title">{{ film.name }}</h1>
-          <p>Жанр: {{ film.genre }}</p>
-          <p>Год выпуска: {{ film.year }}</p>
-          <p>Длительность: {{ film.duration }}</p>
+          <p class="moveGenre">Жанр: {{ film.genre }}</p>
+          <p class="moveGenre">Год выпуска: {{ film.year }}</p>
+          <p class="moveGenre">Длительность: {{ film.duration }}</p>
         </div>
       </div><!-- end content -->
     </div><!-- end content -->
