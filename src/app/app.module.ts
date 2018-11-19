@@ -26,6 +26,9 @@ import {AllSerialsService} from './service/allSerials.service';
 import {PaginationModule} from 'ngx-bootstrap/pagination';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {CanActivateGuard} from './can-activate.guard';
+import {AuthComponent} from './auth/auth.component';
+import {LoginComponent} from './auth/login.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 const routes = [
     {path: '', pathMatch: 'full', component: HomePageComponent},
@@ -37,7 +40,8 @@ const routes = [
     {path: 'filmGenre/:category', component: AllFilmsComponent, canActivate: [CanActivateGuard]},
     {path: 'serialGenre/:category', component: AllSerialsComponent, canActivate: [CanActivateGuard]},
     {path: 'allFilms', component: AllFilmsComponent},
-    {path: 'allSerials', component: AllSerialsComponent}
+    {path: 'allSerials', component: AllSerialsComponent},
+    {path: '**', component: PageNotFoundComponent, pathMatch: 'full'}
 ];
 
 @NgModule({
@@ -55,6 +59,7 @@ const routes = [
         SerialsPipe,
         AllFilmsComponent,
         AllSerialsComponent,
+        AuthComponent, LoginComponent, PageNotFoundComponent
     ],
     imports: [
         BrowserModule,

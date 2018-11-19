@@ -1,0 +1,28 @@
+<div id="modal" class="modal">
+    <form #form="ngForm" (submit)="login(form.value)">
+        <div class="modal-content">
+            <h4 class="center">Login</h4>
+            <div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mail_outline</i>
+                        <input type="text" id="login" (ngModel)="userName" name="userName">
+                        <label for="login">user name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">lock</i>
+                        <input type="password" id="logPassword" (ngModel)="password" name="password">
+                        <label for="logPassword">password</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn waves-light modal-close" type="submit" name="action">login
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+    </form>
+</div>

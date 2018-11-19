@@ -11,3 +11,4 @@ $(document).ready(function () {
 //elmnt.style.display = "none";
 })
 */
+$('.modal').modal();

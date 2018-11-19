@@ -36,7 +36,11 @@ export class AllSerialsComponent implements OnInit {
     pageChanged(event: PageChangedEvent): void {
         const startItem = (event.page - 1) * event.itemsPerPage;
         const endItem = event.page * event.itemsPerPage;
-        this.returnedArray = this.serial.slice(startItem, endItem);
+        if (this.categories) {
+            this.results = this.serial2.slice(startItem, endItem);
+        } else {
+            this.returnedArray = this.serial.slice(startItem, endItem);
+        }
     }
 
     changeCategory() {

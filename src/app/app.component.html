@@ -5,6 +5,36 @@
     <ul class="collapsible">
         <li>
             <div class="collapsible-header">
+                <i class="material-icons">people</i>
+                Login / register
+            </div>
+            <div class="collapsible-body">
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header">
+
+                            <button class="btn-flat modal-trigger" data-target="modal">
+                                <i class="material-icons">person</i>
+                                login
+                            </button>
+                        </div>
+                        <app-login></app-login>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+
+                            <button class="btn-flat modal-trigger" data-target="modal1">
+                                <i class="material-icons">person_add</i>
+                                register
+                            </button>
+                        </div>
+                        <app-auth></app-auth>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
                 <i class="material-icons">dehaze</i>
                 Категории
             </div>
@@ -104,7 +134,7 @@
         <li>
             <div class="collapsible-header">
                 <i class="material-icons">local_atm</i>
-                <a routerLink="/advertisement" class="menu_link">Правообладателям</a>
+                <a routerLink="/advertisement" class="menu_link">Рекламодателям</a>
             </div>
         </li>
 
