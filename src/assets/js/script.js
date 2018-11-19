@@ -1,6 +1,6 @@
 /**
  * Created by ashotkazaryan on 18.11.18.
- */
+
 
 
 $(document).ready(function () {
@@ -10,3 +10,4 @@ $(document).ready(function () {
     console.log(elmnt)
 //elmnt.style.display = "none";
 })
+*/
