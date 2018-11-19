@@ -2,12 +2,12 @@
 #liveInternet {
     display: none;
 }
-#vk_groups {
-    display: inline-block;position: absolute;
-    top: 100%;
+.vk_groups {
+    display: inline-block;
+    position: relative;
+    top: -246px;
     left: 30px;
 }
-
 @media only screen and (max-width: 750px) {
     #vk_groups {
         display: inline-block;

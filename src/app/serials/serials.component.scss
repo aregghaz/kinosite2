@@ -88,6 +88,11 @@
   }
 
 }
+@media only screen and (max-width: 1698px) {
+  .filmName {
+    line-height: 1.1;
+  }
+}
 @media only screen and (max-width: 1626px) {
   .card-image img{
     max-width: 100%;
@@ -213,6 +218,10 @@
     max-height: 500px;
     min-height: 181px;
   }
+  .card-content {
+
+    min-height: 110px;
+  }
 }
 @media only screen and (max-width: 750px) {
   .card-content {
@@ -230,6 +239,9 @@
     min-width: 100%;
     max-height: 500px;
     min-height: 150px;
+  }
+  .card .card-content .card-title i {
+    line-height: 22px;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -265,6 +277,10 @@
   .filmName {
     width: 67%;
     float: left;
+  }
+  .card .card-content .card-title i {
+    line-height: 12px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 600px) {
